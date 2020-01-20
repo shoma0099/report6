@@ -1,7 +1,10 @@
 package jp.ac.uryukyu.e195737;
 
-public class Main {
-    public static void main(String[] args){
+import java.util.Arrays;
 
+public class Main {
+    public static void main(String[] args) {
+        Dice dice = new Dice();
+        dice.method();
     }
 }

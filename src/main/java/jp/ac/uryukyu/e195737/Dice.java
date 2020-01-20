@@ -4,12 +4,13 @@ import java.util.Random;
 
 public class Dice {
 
-    void method() {
-        int[] dices = new int[3];
-        for (int i = 0; i < dices.length; i++) {
-            dices[i] = (int) (Math.random() * 6) + 1;
-        }
-        String list = Arrays.toString(dices);
-        System.out.println(list);
+    void method(){
+        System.out.println("勝負を始めます。");
+        System.out.println("あなたのターン");
+        Tintiro tin = new Tintiro();
+        tin.method();
+        System.out.println("相手のターン");
+        tin.method();
+
     }
 }
