@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Tintiro {
 
-    public void method() {
+    public int method() {
         /**チンチロリンを作る
          * 今回の役は以下の４つ
          * ３個中２個同じ目が出た時残りの一個の目が大きければ勝ち
@@ -22,11 +22,10 @@ public class Tintiro {
         int b = dices[1];
         int c = dices[2];
         int score = 0;
-
-
         if (a == b) {
             if (a == c) {
                 System.out.println("勝ちです。");
+                score = 7;
             } else {
                 score = c;
                 System.out.println("スコアは" + score + "です。");
@@ -39,9 +38,15 @@ public class Tintiro {
             System.out.println("スコアは" + score + "です。");
         } else if (a + b + c == 15) {
             System.out.println("勝ちです。配当が２倍になります。");
+            score = 11;
         } else if (a + b + c == 6) {
             System.out.println("負けです。配当を２倍支払います。");
+            score = 12;
         } else {
             System.out.println("役ができませんでした。");
-        }}}
+        }
+        int sco = score;
+        return sco;
+    }
+}
 
