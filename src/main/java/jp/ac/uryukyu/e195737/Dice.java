@@ -6,6 +6,7 @@ public class Dice {
     void method(){
         int sco1;
         int sco2;
+        int sco = 0;
         Bet bet = new Bet();
         Tintiro tin = new Tintiro();
         System.out.println("あなたのターン");
@@ -25,10 +26,10 @@ public class Dice {
         }else if(sco1<sco2){
             bet.make();
             System.out.println("あなたの負けです。");
-        }else if(sco1==sco2){
+        }else if(sco1>sco2){
             bet.kati();
             System.out.println("あなたの勝ちです。");
-        }else if(sco1>sco2){
+        }else if(sco1==sco2){
             System.out.println("引き分けです。");
         }
         System.out.println("あなたの所持金は"+mon1+"円。相手の所持金は"+mon2+"円。");
